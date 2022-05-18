@@ -1,0 +1,586 @@
+<!-- 
+  // require('read.php');
+// ?> -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500&family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>FINDING THE LOST ART OF CREATIVE WRITING</title>
+  </head>
+  <header>
+  </header>
+  <body style=" background-image: url('litt.png'); height: auto;
+  ">
+  <script>
+    $(document).ready(function(){
+        $("#myModal1").modal('show');
+    });
+
+    $(document).ready(function(){
+        $("#myModal").modal('show');
+    });
+    function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "Read more";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "Read more";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+}
+
+$(document).ready(function () {
+    $('.nav-toggle').click(function () {
+        var collapse_content_selector = $(this).attr('href');
+        var toggle_switch = $(this);
+        $(collapse_content_selector).toggle(function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.html('Read More');
+            } else {
+                toggle_switch.html('Read Less');
+            }
+        });
+    });
+
+});
+
+$('a.thumb1').on('click',function(){ // when press link
+
+var fullImg = $(this).attr('href') // get full size img url
+$('#popup img').attr('src', fullImg) // image in popup now has source that you need
+$('#popup').show() // popup appears
+return false // do not redirect 
+
+})
+
+$('.close_popup').on('click', function(){
+
+$('#popup').hide() // close popup
+
+})
+
+
+
+
+    // (B) GET AUDIO TAG + DEFINE PLAYLIST
+let audio = document.getElementById("bgm"),
+    playlist = ["Mozart's The Marriage Of Figaro (Overture), K. 492 - WOLFGANG AMADEUS MOZART #music #classical.mp3", "2.mp3"],
+    current = 0;
+ 
+// (C) AUTO LOAD NEXT SONG
+audio.onended = () => {
+  current++;
+  if (current >= playlist.length) { current = 0; }
+  audio.src = playlist[current];
+  audio.pause();
+  audio.load();
+  audio.play();
+};
+</script>
+<style>
+    .boton1 {
+      border-radius: 55%;
+      width: auto;
+      height: auto;
+      padding: 15px 25px;
+      font-size: 25px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #c98860;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px rgb(0, 0, 0);
+      font-family: Bungee;
+    }
+    
+    .boton1:hover {background-color: #60a3e9}
+    
+    .boton1:active {
+      background-color: #6a6eb7;
+      box-shadow: 0 5px rgb(0, 0, 0);
+      transform: translateY(4px);
+    }
+
+    .boton2 {
+      border-radius: 55%;
+      width: auto;
+      height: auto;
+      padding: 15px 25px;
+      font-size: 25px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #c98860;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px rgb(0, 0, 0);
+      font-family: Bungee;
+    }
+    
+    .boton2:hover {background-color: #60a3e9}
+    
+    .boton2:active {
+      background-color: #6a6eb7;
+      box-shadow: 0 5px rgb(0, 0, 0);
+      transform: translateY(4px);
+    }
+
+    .boton3 {
+  border-radius: 55%;
+  width: auto;
+  height: auto;
+  padding: 15px 25px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #c98860;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(0, 0, 0);
+  font-family: Bungee;
+}
+
+.boton3:hover {background-color: #60a3e9}
+
+.boton3:active {
+  background-color: #6a6eb7;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
+}
+.boton5{
+  border-radius: 55%;
+  width: auto;
+  height: auto;
+  padding: 15px 25px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #c98860;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(0, 0, 0);
+  font-family: Bungee;
+}
+
+.boton5:hover {background-color: #60a3e9}
+
+.boton5:active {
+  background-color: #6a6eb7;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
+
+  
+}
+
+.baseBlock {
+	margin: 0px 0px 35px 0px;
+	padding: 0 0 15px 0px;
+	border-radius: 5px;
+	overflow: hidden;
+	min-height: 390px;
+	background: #f3e3d3;
+	-moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  font-family: 'Bungee';
+}
+
+.baseBlock:hover {
+	-webkit-transform: translate(0, -25px);
+	-moz-transform: translate(0, -25x);
+	-ms-transform: translate(0, -25px);
+	-o-transform: translate(0, -25px);
+	transform: translate(0, -25px);
+	box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+}
+
+.flier {
+	pointer-events: none;
+}
+
+.flier > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	70% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	75.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	80% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	90.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	105% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	110.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	115% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
+}
+
+
+.content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.text_shadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: 'Bungee';
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  color: transparent;
+  background-clip: text;
+  animation: shadows 2.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.1rem;
+}
+
+
+
+
+
+
+    
+    </style>
+<!-- <div id="myModal1" class="modal fade">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="font-family: 'Bungee';"><i class="fa fa-map-marker" aria-hidden="true" style="color: #ffd500;"></i> Literature room</h5>
+              <img src="Edisonguider-removebg-preview.png" alt="..." class="rounded">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <h4 class="text-center" style="color: #172321; font-weight: lighter; font-family: Bungee;">Welcome to the literature room!</h4>
+              <p style="color: #c98860; font-family: Bungee;">Click the "view image" button to view the content.</p>
+              <a class="btn close text-muted" data-dismiss="modal" style="font-family: Bungee;">Continue</a>
+            </div>
+      </div>
+  </div>
+</div> -->
+</audio>
+  <!-- <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel" style="font-family: 'Bungee';"><i class="fa fa-map-marker" aria-hidden="true" style="color: #ffd500;"></i> Literature room</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center" style="color: #172321; font-weight: lighter; font-family: Bungee;">Welcome to the literature room!.</h4>
+                <p style="color: #c98860; font-family: Bungee;">In this room, you'll find classic literature works, poems, modern literature, trivias, and games.</p>
+                <a class="btn close text-muted" data-dismiss="modal" style="font-family: Bungee;">Continue</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="flier">
+    <a href="" style="font-family: 'Bungee'; color: #c98860;">
+        <i class="fa fa-map-marker" aria-hidden="true" style="color: #ffd500;"></i>  Literature room
+   </a>
+  </div> -->
+
+      <section class="mt-4 py-5 mb-5">
+          <div class="container">
+              <div class="row">
+                <audio src="Mozart's The Marriage Of Figaro (Overture), K. 492 - WOLFGANG AMADEUS MOZART #music #classical.mp3" id="bgm" autoplay></audio>
+                <embed src="Mozart's The Marriage Of Figaro (Overture), K. 492 - WOLFGANG AMADEUS MOZART #music #classical.mp3" loop="true" autostart="true" width="2" height="0">
+                  <div class="col-sm-6 col-lg-12">
+                      <div class="col text-center d-flex justify-content-center">                 
+                        <a href="lobby3.html" class="btn text-center boton1 btn-default" style="float: left; margin-right: 5px;"><i class="fa fa-angle-double-left"></i>PREVIOUS ROOM</a>
+                        <a href="2nd.html" class="btn text-center boton2 btn-default" style="float: right;">NEXT ROOM<i class="fa fa-angle-double-right"></i></a>
+                      </div>
+                      <div class="row">
+                        <!-- <div class="col-sm-6 col-lg-12">
+                          <div class="col text-end d-flex justify-content-end">
+                            <a href="first.html" class="btn text-center boton3 btn-default" style="margin-bottom: 15px;">CLICK HERE</a>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-12">
+                          <div class="col text-end d-flex justify-content-start">
+                            <a href="first.html" class="btn text-center boton5 btn-default">CLICK HERE</a>
+                          </div>
+                      </div> -->
+                      <audio>
+                        <embed src="moz.wav" loop="true" autostart="true" type="audio/mpeg/mp3/wav" width="0" height="0">
+                      </audio>
+
+                      
+                      <div class="container mt-5">
+
+                        <div class="row d-flex justify-content-center">
+                          <div class="col-md-4">
+                            <p class="text-center typed-out">You may now begin your tour by heading to the 
+                              <a href="museum.html" class=" text-center" style="color: #172321;">
+                                Literature room!
+                              </a>
+                              <!-- <a href="museum.html" class="btn text-center boton1 btn-default" style="">
+                                Literature room!
+                              </a> -->
+                            </p>
+                          </div>
+                          
+                         <div class="col-md-4">
+                          <div class="card baseBlock">
+                          <a id="thumb" class="thumb1" href="jane.jpg">
+                         <img class="card-img-top" data-src="jane.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="jane.jpg" data-holder-rendered="true">
+                         </a>
+                         <!-- <div id="popup">
+                          <img src="" />
+                          <div class="close_popup">X</div>
+                        </div> -->
+                         <div class="card-body">
+                           <h4 class="card-title" style="color: #8e5431;"> Jane Eyre by Charlotte Bronte (1847)</h4>
+                            <p class="card-text col">one of literature’s steeliest heroines, in her short life Jane Eyre has overcome a traumatic childhood only to be challenged by secrets, strange noises and mysterious fires in her new home of Thornfield Hall.</p>
+                            <div id="collapse" style="display:none">
+                              <p> All while falling in love with her employer, Mr Rochester. A Gothic masterpiece which was groundbreaking in its intimate use of the first-person narrative.</p>
+                          </div>
+                          <a href="#collapse" class="nav-toggle mb-4">Read More</a>
+                          <a href="jane.jpg" type="button" class="btn boton5 btn-primary ">
+                           view image
+                          </a>
+    
+                          <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Members</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  ...
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div> -->
+
+                         </div>
+                       </div>
+                         </div>
+
+                         <div class="col-md-4">
+                          <div class="card baseBlock">
+                         <img class="card-img-top" data-src="jane.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="el.jpg" data-holder-rendered="true">
+                         <div class="card-body">
+                           <h4 class="card-title" style="color: #8e5431;">The Death of the Heart  by Elizabeth Bowen (1938)</h4>
+                            <p class="card-text">Considered Elizabeth Bowen’s masterpiece novel, this is the story of 16-year old Portia who is sent to live with her Aunt in London, after her mother’s death. There, she falls for the attractive cad Eddie. A devastating exploration of adolescent love and innocence betrayed.</p>
+                            <!-- <div id="collapse" style="display:none">
+                              <p>A devastating exploration of adolescent love and innocence betrayed.</p>
+                          </div> -->
+                          <!-- <a href="#collapse" class="nav-toggle mb-4">Read More</a> -->
+                          <a href="el.jpg" type="button" class="btn boton5 btn-primary ">
+                            view image
+                           </a>                                                 
+                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                               
+                                <div class="modal-body">
+                                  <img class="card-img-top" data-src="jane.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="jane.jpg" data-holder-rendered="true">
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                         </div>
+                       </div>
+                         </div>
+
+                         <div class="col-md-4">
+                          <div class="card baseBlock">
+                         <img class="card-img-top" data-src="jane.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="to.jpg" data-holder-rendered="true">
+                         <div class="card-body">
+                           <h4 class="card-title col-lg-12" style="color: #8e5431;">To kill a mockingbird by Harper Lee (1960)</h4>
+                            <p class="card-text col">A novel before its time, Harper Lee’s Pulitzer-prize winner addresses issues of race, inequality and segregation with both levity and compassion. </p>
+                            <div id="collapse7" style="display:none">
+                              <p class="col">Told through the eyes of loveable rogues Scout and Jem, it also created one of literature’s most beloved heroes – Atticus Finch, a man determined to right the racial wrongs of the Deep South.</p>
+                          </div>
+                          <a href="#collapse7" class="nav-toggle mb-5">Read More</a>
+                          <a href="to.jpg" type="button" class="btn boton5 btn-primary mt-4 mb-5">
+                            view image
+                           </a>                                                
+                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                               
+                                <div class="modal-body">
+                                  <img class="card-img-top" data-src="jane.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="jane.jpg" data-holder-rendered="true">
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                         </div>
+                       </div>
+                         </div>
+
+
+                         <div class="container mt-2">
+                          <div class="row">
+                           <div class="col-md-4">
+                            <div class="card baseBlock">
+                            <a id="thumb" class="thumb1" href="jane.jpg">
+                           <img class="card-img-top" data-src="jane.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="the.jpg" data-holder-rendered="true">
+                           </a>
+                           <!-- <div id="popup">
+                            <img src="" />
+                            <div class="close_popup">X</div>
+                          </div> -->
+                           <div class="card-body">
+                             <h4 class="card-title" style="color: #8e5431;"> The Alchemist by Paolo Coelho (1988)</h4>
+                              <p class="card-text"> This story, dazzling in its powerful simplicity and soul-stirring wisdom, is about an Andalusian shepherd boy named Santiago, who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids.
+                              </p>
+                              <div id="collapse1" style="display:none">
+                                <p>Along the way he meets a Romany woman, a man who calls himself a king, and an alchemist, all of whom point Santiago in the right direction for his quest. No one knows what the treasure is, or whether Santiago will be able to surmount the obstacles in his path; but what starts out as a journey to find worldly goods turns into a discovery of treasure within.</p>
+                            </div>
+                            <a href="#collapse1" class="nav-toggle mb-4">Read More</a>
+                            <a href="the.jpg" type="button" class="btn boton5 btn-primary ">
+                             view image
+                            </a>
+                        </div>
+                       </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card baseBlock">
+                      <a id="thumb" class="thumb1" href="jane.jpg">
+                     <img class="card-img-top" data-src="jane.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="har.jpg" data-holder-rendered="true">
+                     </a>
+                     <!-- <div id="popup">
+                      <img src="" />
+                      <div class="close_popup">X</div>
+                    </div> -->
+                     <div class="card-body">
+                       <h4 class="card-title" style="color: #8e5431;">Harry Potter and the Goblet of Fire by
+                        J.K. Rowling (2000) </h4>
+                        <p class="card-text"> The fourth book in the Harry Potter franchise sees Harry returning for his fourth year at Hogwarts School of Witchcraft and Wizardry, along with his friends, Ron and Hermione.
+                        </p>
+                        <div id="collapse2" style="display:none">
+                          <p class="card-text">There is an upcoming tournament between the three major schools of magic, with one participant selected from each school by the Goblet of Fire. When Harry's name is drawn, even though he is not eligible and is a fourth player, he must compete in the dangerous contest.</p>
+                      </div>
+                      <a href="#collapse2" class="nav-toggle mb-4">Read More</a>
+                      <a href="har.jpg" type="button" class="btn boton5 btn-primary ">
+                       view image
+                      </a>
+                  </div>
+                 </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card baseBlock">
+                <a id="thumb" class="thumb1" href="jane.jpg">
+               <img class="card-img-top" data-src="jane.jpg" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="gir.jpg" data-holder-rendered="true">
+               </a>
+               <!-- <div id="popup">
+                <img src="" />
+                <div class="close_popup">X</div>
+              </div> -->
+               <div class="card-body">
+                 <h4 class="card-title" style="color: #8e5431;">The Girl with the Dragon Tattoo by Stieg Larsson (2005)  </h4>
+                  <p class="card-text"> Harriet Vanger, a scion of one of Sweden’s wealthiest families disappeared over forty years ago. 
+                  </p>
+                  <div id="collapse3" style="display:none">
+                    <p class="card-text">All these years later, her aged uncle continues to seek the truth. He hires Mikael Blomkvist, a crusading journalist recently trapped by a libel conviction, to investigate. He is aided by the pierced and tattooed punk prodigy Lisbeth Salander. Together they tap into a vein of unfathomable iniquity and astonishing corruption.</p>
+                </div>
+                <a href="#collapse3" class="nav-toggle mb-4">Read More</a>
+                <a href="gir.jpg" type="button" class="btn boton5 btn-primary ">
+                 view image
+                </a>
+            </div>
+           </div>
+        </div>
+
+
+                  </div>
+              </div>
+              
+          </div>
+      </section> 
+  </body>
+</html>
+
+
+               

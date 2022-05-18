@@ -1,0 +1,649 @@
+<!-- 
+  // require('read.php');
+// ?> -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500&family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link  href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+    <link  href="/bower_components/bootstrap-horizon/bootstrap-horizon.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>FINDING THE LOST ART OF CREATIVE WRITING</title>
+  </head>
+  <header>
+      <!-- <h3 class="text-center">FINDING THE LOST ART OF CREATIVE WRITING</h3> -->
+      <nav class="navbar navbar-expand-lg navbar-red navbar-dark fixed-top">
+        <div class="wrapper">
+          
+        </div>
+  <div class="container-fluid all-show">
+    <a class="navbar-brand" href="index.html" style="color: #f3e3d3;">Finding the lost art of creative writing<i class="fa fa-codepen"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" style=" font-style: italic;" aria-current="page" href="#">Workshop</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link"  href="lobby3.html">Lobby</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="2nd.html">Movies</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Animations</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Games</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Advertising</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Comics</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="theater.html">Theater</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="literatureroom.html">Literature</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Activity </a>
+        </li>
+
+        
+        
+      </ul>
+      <div class="d-flex flex-column sim">
+
+        <!-- <span>1 item added to your quote</span>
+        <small class="text-primary">view your quote</small> -->
+        
+      </div>
+    </div>
+  </div>
+</nav>
+  </header>
+  <body style=" background-image: url('12.png');
+  ">
+  <script>
+    $(document).ready(function(){
+        $("#myModal").modal('show');
+    });
+
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+</script>
+<style>
+    h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-family: Bungee;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 15px;
+  text-shadow: 0 1px 0 #efefef,
+               0 2px 0 #efefef,
+               0 3px 0 #efefef,
+               0 4px 0 #efefef,
+               0 30px 5px rgba(0, 0, 0, 0.1);
+  /* animation: swing 3s linear infinite alternate; */
+}
+    .boton1 {
+      border-radius: 55%;
+      width: auto;
+      height: auto;
+      padding: 15px 25px;
+      font-size: 25px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #c98860;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px rgb(0, 0, 0);
+      font-family: Bungee;
+    }
+    
+    .boton1:hover {background-color: #60a3e9}
+    
+    .boton1:active {
+      background-color: #6a6eb7;
+      box-shadow: 0 5px rgb(0, 0, 0);
+      transform: translateY(4px);
+    }
+
+    .boton2 {
+      border-radius: 55%;
+      width: auto;
+      height: auto;
+      padding: 15px 25px;
+      font-size: 25px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #c98860;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px rgb(0, 0, 0);
+      font-family: Bungee;
+    }
+    
+    .boton2:hover {background-color: #60a3e9}
+    
+    .boton2:active {
+      background-color: #6a6eb7;
+      box-shadow: 0 5px rgb(0, 0, 0);
+      transform: translateY(4px);
+    }
+
+    .boton1 {
+      border-radius: 55%;
+      width: auto;
+      height: auto;
+      padding: 15px 25px;
+      font-size: 25px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #c98860;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px rgb(0, 0, 0);
+      font-family: Bungee;
+    }
+    
+    .boton1:hover {background-color: #60a3e9}
+    
+    .boton1:active {
+      background-color: #6a6eb7;
+      box-shadow: 0 5px rgb(0, 0, 0);
+      transform: translateY(4px);
+    }
+
+    .boton2 {
+      border-radius: 55%;
+      width: auto;
+      height: auto;
+      padding: 15px 25px;
+      font-size: 25px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #c98860;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px rgb(0, 0, 0);
+      font-family: Bungee;
+    }
+    
+    .boton2:hover {background-color: #60a3e9}
+    
+    .boton2:active {
+      background-color: #6a6eb7;
+      box-shadow: 0 5px rgb(0, 0, 0);
+      transform: translateY(4px);
+    }
+
+    .boton3 {
+  border-radius: 55%;
+  width: auto;
+  height: auto;
+  padding: 15px 25px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #c98860;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(0, 0, 0);
+  font-family: Bungee;
+}
+
+.boton3:hover {background-color: #60a3e9}
+
+.boton3:active {
+  background-color: #6a6eb7;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
+}
+.boton5{
+  border-radius: 55%;
+  width: auto;
+  height: auto;
+  padding: 15px 25px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #c98860;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(0, 0, 0);
+  font-family: Bungee;
+}
+
+.boton5:hover {background-color: #60a3e9}
+
+.boton5:active {
+  background-color: #6a6eb7;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
+
+  
+}
+
+.baseBlock {
+	margin: 0px 0px 35px 0px;
+	padding: 0 0 15px 0px;
+	border-radius: 5px;
+	overflow: hidden;
+	min-height: 390px;
+	background: #f3e3d3;
+	-moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  font-family: 'Bungee';
+}
+
+.baseBlock:hover {
+	-webkit-transform: translate(0, -25px);
+	-moz-transform: translate(0, -25x);
+	-ms-transform: translate(0, -25px);
+	-o-transform: translate(0, -25px);
+	transform: translate(0, -25px);
+	box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+}
+
+.flier {
+	pointer-events: none;
+}
+
+.flier > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	70% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	75.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	80% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	90.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	105% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	110.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	115% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
+}
+.frame {
+width:560px;
+height:410px; 
+border:5px groove #c98860;
+border-radius:55px;
+box-shadow: 0 12px rgb(0, 0, 0);
+margin-left: 10px;
+
+}
+
+#banner { 
+                background: url(img/library-img.jpg) no-repeat center 0; 
+                background-size: cover; 
+                height: 500px; 
+                border: solid 3px #000000; 
+                text-align: center;
+                position: relative;  
+                overflow: hidden 
+        }
+        .doorText { 
+                background-color: #efcead; 
+                color: #333; 
+                font-family: 'Bungee'; 
+                font-size: 24px; 
+                font-weight: lighter; 
+                line-height: 45px; 
+                height: 45px; 
+                border:solid 1px rgba(0,0,0,0.15); 
+                border-width:1px 0;
+                position: absolute; 
+                top: 50%;  
+                padding: 0 0 0 20px; 
+                left: 1px; 
+                right: 1px; 
+                margin-top: -22.5px; 
+                text-shadow: 0 1px 1px rgba(255,255,255,0.25); 
+        }
+        .doorHoverLeft { 
+                position: absolute; 
+                left: 0%; 
+                top: 0; 
+                bottom: 0; 
+                width: 50%; 
+                transition: 3s ease-in-out; 
+                box-shadow: inset 0 0 0 1px rgba(0,0,0,0.40); 
+                background: rgba(255, 255, 255, 0.35); 
+                background: -moz-linear-gradient(-45deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); 
+                background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(226,226,226,0.35)), color-stop(50%, rgba(219,219,219,0.35)), color-stop(51%, rgba(209,209,209,0.35)), color-stop(100%, rgba(254,254,254,0.35))); 
+                background: -webkit-linear-gradient(-45deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); 
+                background: -o-linear-gradient(-45deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); 
+                background: -ms-linear-gradient(-45deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); 
+                background: linear-gradient(135deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
+        }
+        .doorHoverRight { 
+                position: absolute; 
+                right: 0%; 
+                top: 0; 
+                bottom: 0; 
+                width: 50%; 
+                transition: 3s ease-in-out; 
+                box-shadow: inset 0 0 0 1px rgba(0,0,0,0.40); 
+                background: rgba(255, 255, 255, 0.35); 
+                background: -moz-linear-gradient(-45deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); 
+                background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(226,226,226,0.35)), color-stop(50%, rgba(219,219,219,0.35)), color-stop(51%, rgba(209,209,209,0.35)), color-stop(100%, rgba(254,254,254,0.35))); 
+                background: -webkit-linear-gradient(-45deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); 
+                background: -o-linear-gradient(-45deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); 
+                background: -ms-linear-gradient(-45deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); 
+                background: linear-gradient(135deg, rgba(226,226,226,0.35) 0%, rgba(219,219,219,0.35) 50%, rgba(209,209,209,0.35) 51%, rgba(254,254,254,0.35) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
+        }
+        #banner:hover .doorHoverLeft { 
+                left: -50%; 
+        }
+        #banner:hover .doorHoverRight { 
+                right: -50%; 
+        }
+    
+
+  .close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.navbar-nav>li>a{
+
+text-transform: uppercase;
+font-size: 12px;
+margin-right:12px;
+color: #172321;
+font-family: 'Bungee';
+}
+
+
+.navbar-toggler {
+  padding: .20rem .50rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 2px solid rgb(0, 0, 0);
+
+  }
+
+  .nav-link{
+
+    color: #fff !important;
+  }
+
+
+.wrapper{
+    width: 100%;
+  position: absolute;
+  height: 100%;
+  background-color: #efcead;
+  clip-path: polygon(105% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
+  transition: 2s all;
+  
+}
+
+.navbar-brand{
+
+color:#172321;
+font-family: 'Bungee';
+margin-bottom: 4px;
+font-size: 20px;
+}
+
+.navbar-red:hover .wrapper{
+
+clip-path: polygon(91% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%);
+
+}
+
+.navbar-brand:hover{
+
+color:#fff;
+
+}
+
+.navbar-red{
+
+background-color: #c98860 ;
+color: #fff;
+border-radius: 0px;
+
+}
+
+.all-show{
+
+z-index: 10;
+}
+    </style>
+
+      <section class="mt-4 py-5 mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="d-flex justify-content-center">
+            <h1 class="text-center mb-5">Workshop room</h1>
+            </div>
+              <div class="d-flex justify-content-center row row-horizon">
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame ">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=fr3tRt02X7k&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index"></iframe>
+                    </div> 
+                </div>  
+                <div class="col-sm-6 mb-4 ">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=eRfqHveopp4&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=2
+                        "></iframe>
+                    </div> 
+                </div>   
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=86x-u-tz0MA&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=3
+                        "></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=RSoRzTtwgP4&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=4"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=YAKcbvioxFk&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=5"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=ZQTQSbjecLg&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=6"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=flthk8SNiiE&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=7"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=B5vEfuLS2Qc&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=8"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=KxDwieKpawg&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=9"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=NZSTcBRp8gg&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=10"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=mMeNnX1FGgg&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=11"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=yPptuJYSf4E&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=12"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=5LxiYwMrwRg&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=13"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=U_d0tIugpSA&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=14"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=pHdzv1NfZRM&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=15"></iframe>
+                    </div> 
+                </div> 
+                <div class="col-sm-6 mb-4">
+                    <div class="embed-responsive embed-responsive-4by3 frame">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=yHKKtxliYaY&list=PLfX5hlFtbdpRnneltMWi8i6S3gBCEr5wj&index=16"></iframe>
+                    </div> 
+                </div> 
+
+              
+                <div class="col-sm-6 mb-3 d-flex justify-content-start ">
+                    <!-- <a href="mapo2.png" class="fixed-bottom ml-5 mb-5 justify-content-start"> -->
+                        <button type="button" class=" col-sm-1 btn boton1 fixed-bottom ml-5 mb-5 justify-content-start" data-toggle="modal" data-target="#exampleModal">Map</button>
+                    <!-- </a> -->
+                    <div id="exampleModal" class="modal fade">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-content">
+                          <div class="modal-body">
+                            <img src="mapo2.png" style="width:100%">
+                          </div>
+                      </div>
+                    </div>
+                    
+                </div>  
+
+                <div id="banner">
+                  <div class="row">
+                    <a href="" class="mt-5">
+                      <!-- <button class=""></button> -->
+                   </a>
+                      <a href="index.html" class="mt-5">
+                          <button class="boton1">Activity Room</button>
+                       </a>
+                  </div>
+                  <div class="doorHoverLeft"><span class="doorText">Hover to </span></div>
+                  <div class="doorHoverRight"><span class="doorText">open</span></div>
+                </div>  
+
+              </div>
+          </div>
+      </div>
+      </section> 
+  </body>
+  
+</html>
+
